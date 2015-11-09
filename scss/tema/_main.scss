@@ -1,3 +1,30 @@
 #main{
 	padding-top: 3em;
+	figure[alt="logo"]{
+		width: 65%;
+		margin: auto;
+	}
+	figure[alt="micro"]{
+		margin: 2rem 0;
+		cursor: pointer;
+		img{
+			width: 150px;
+		}
+	}
+	p{
+		color: #ffffff;
+		margin: auto;
+		@include desde(movil){
+			width: 50%;
+		}
+	}
+	button{
+		margin-top: 10rem;
+		width: 85%;
+		border-radius: 50px;
+		border:1px solid white;
+		color:white;
+		line-height: 4;
+		background:rgba(0,0,0,0);
+	}
 }

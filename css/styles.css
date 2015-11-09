@@ -3646,7 +3646,7 @@ header .ed-item[data='menu'] span {
 }
 
 header [data='nav'] {
-  background-color: rgba(37, 37, 38, 0.8);
+  background-color: rgba(37, 37, 38, 0.9);
   height: 100vh;
   display: none;
   position: absolute;
@@ -3690,4 +3690,39 @@ header [data='nav'] ul li a {
 
 #main {
   padding-top: 3em;
+}
+
+#main figure[alt="logo"] {
+  width: 65%;
+  margin: auto;
+}
+
+#main figure[alt="micro"] {
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+#main figure[alt="micro"] img {
+  width: 150px;
+}
+
+#main p {
+  color: #ffffff;
+  margin: auto;
+}
+
+@media screen and (min-width: 480px) {
+  #main p {
+    width: 50%;
+  }
+}
+
+#main button {
+  margin-top: 10rem;
+  width: 85%;
+  border-radius: 50px;
+  border: 1px solid white;
+  color: white;
+  line-height: 4;
+  background: transparent;
 }
