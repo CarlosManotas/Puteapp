@@ -1,12 +1,18 @@
 body{
 	background-color: #C3C3C5;
-	/*background-image: url(../img/microBack.svg);*/
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
 	position: relative;
 	margin:0;
 	padding:0;
 	font-family: 'heroregular', 'san-serif';
+}
+.microBack{
+	background-image: url(../img/microBack.svg);
+	background-position-x: 50%;
+}
+.opacity0{
+	opacity: 0;
+	transition: all .5s;
 }
 .loader{
 	background-color: #C3C3C5;
@@ -39,6 +45,7 @@ header{
 		height: 100vh;
 		display: none;
 		position: absolute;
+		z-index: 99998;
 		figure{
 			margin-top: 3.5em;
 		}
