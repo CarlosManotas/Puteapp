@@ -1,6 +1,12 @@
 body{
 	background-color: #C3C3C5;
+	/*background-image: url(../img/microBack.svg);*/
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 	position: relative;
+	margin:0;
+	padding:0;
+	font-family: 'heroregular', 'san-serif';
 }
 .loader{
 	background-color: #C3C3C5;

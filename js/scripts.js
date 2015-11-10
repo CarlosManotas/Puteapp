@@ -3,6 +3,7 @@ $(function(){
 	var $btn = $('#btn');
 	var $menu = $('[data="nav"]');
 	var $micro = $('[alt="micro"]');
+	var $body = $('body');
 	$logo.animate({
 		'margin-top':'30em',
 		'opacity':'0'},2000,function(){
@@ -14,6 +15,9 @@ $(function(){
 	$micro.on('click',function(){
 		$(this).css({
 			'opacity':'0'
+		});
+		$body.css({
+			'background-image':' url(../img/microBack.svg)'
 		});
 	})
 });

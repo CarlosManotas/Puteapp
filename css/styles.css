@@ -1514,6 +1514,14 @@ class="no-padding" a la caja le da padding cero solo a ella
 }
 
 @font-face {
+  font-family: 'heroregular';
+  src: url("../fonts/hero-webfont.eot");
+  src: url("../fonts/hero-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/hero-webfont.woff2") format("woff2"), url("../fonts/hero-webfont.woff") format("woff"), url("../fonts/hero-webfont.ttf") format("truetype"), url("../fonts/hero-webfont.svg#heroregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "ed-grid";
   src: url("../fonts/ed-grid.eot");
   src: url("../fonts/ed-grid.eot?#iefix") format("embedded-opentype"), url("../fonts/ed-grid.woff") format("woff"), url("../fonts/ed-grid.ttf") format("truetype"), url("../fonts/ed-grid.svg#ed-grid") format("svg");
@@ -3602,7 +3610,13 @@ h6 {
 
 body {
   background-color: #C3C3C5;
+  /*background-image: url(../img/microBack.svg);*/
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'heroregular', 'san-serif';
 }
 
 .loader {
@@ -3689,7 +3703,7 @@ header [data='nav'] ul li a {
 }
 
 #main {
-  padding-top: 3em;
+  padding-top: 3.9em;
 }
 
 #main figure[alt="logo"] {
