@@ -36,13 +36,19 @@ html(lang="es")
             img(src="img/pasos.svg", alt="")
       .ed-container.abcenter
         .ed-item
+          form(action="/manual_post",id='form',method='POST')
+            textarea#problema(name="problema",placeholder='escribi aqui')
+            button SIGUIENTE
+
+      .ed-container.abcenter
+        .ed-item
           figure(alt="micro")
             img(src="img/micro.svg")
         .ed-item
           p Apretá el mic y seleccioná “permitir” para comenzar a grabar
       .ed-container.abcenter
         .ed-item
-          button.icon-derecha.espacio Ingresar Manualmente
+          button#btnMano.icon-derecha.espacio Ingresar Manualmente
 
 
 

@@ -1,10 +1,13 @@
 $(function(){
 	var $logo           = $('.loader figure');
 	var $btn            = $('#btn');
+	var $btn2           = $('#btnMano');
 	var $menu           = $('[data="nav"]');
 	var $micro          = $('[alt="micro"]');
 	var $body           = $('body');
 	var $centroMicro    = $(".microBack");
+	var $btnMensaje     = $("form textarea[placeholder='escribi aqui']");
+	var $pantalla       = $(window);
 	var $topMicro;
 	
 	$logo.animate({
@@ -22,5 +25,23 @@ $(function(){
 		$body.css({
 			"background-position-y": ($topMicro - 245) + "px"
 		});
+	})
+	$btn2.on('click',function(){
+		$btnMensaje.parent().css({'display':'block'});
+		$body.css({'overflow':'hidden'});
+		$body.removeClass('microBack');
+		$pantalla.scrollTop(0);
+	});
+	$btnMensaje.on('click',function(){
+		$(this).css({
+			'margin-top':'3em',
+			'min-height':'250px',
+			'background-color':'#56595A'
+		});
+		$body.css('overflow','hidden');
+	});
+	$btnMensaje.next().on('click',function(){
+		$(this).parent().parent().css('display','none');
+		$body.css({'overflow-y':'scroll','overflow-x':'hidden'});
 	})
 });
