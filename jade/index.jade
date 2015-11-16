@@ -35,22 +35,28 @@ html(lang="es")
         .ed-item
           figure
             img(src="img/pasos.svg", alt="")
-      .ed-container.abcenter
-        .ed-item
-          form(action="/manual_post",id='form',method='POST')
-            textarea#problema(name="problema",placeholder='escribi aqui')
-            button SIGUIENTE
-
-      .ed-container.abcenter
-        .ed-item
-          figure(alt="micro")
-            img(src="img/micro.svg")
-        .ed-item
-          p Apretá el mic y seleccioná “permitir” para comenzar a grabar
-      .ed-container.abcenter
-        .ed-item
-          button#btnMano.icon-derecha.espacio Ingresar Manualmente
-
+    section#section
+      article#grabar
+        .ed-container.abcenter
+          .ed-item
+            figure(alt="micro")
+              img(src="img/micro.svg")
+          .ed-item
+            p Apretá el mic y seleccioná “permitir” para comenzar a grabar
+        .ed-container.abcenter
+          .ed-item
+            button#btnManual.icon-derecha.espacio Ingresar Manualmente
+      article#manual
+        .ed-container.abcenter
+          .ed-item
+            form(action="/manual_post",id='form',method='POST')
+              span.input.input--jiro
+                textarea#input-10.input__field.input__field--jiro(type="text")
+                label.input__label.input__label--jiro(for="input-10")
+                  span.input__label-content.input__label-content--jiro
+                    | Escribe aquí
+              button SIGUIENTE
+              
 
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")

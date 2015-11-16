@@ -1,14 +1,15 @@
 $(function(){
 	var $logo           = $('.loader figure');
 	var $btn            = $('#btn');
-	var $btn2           = $('#btnMano');
+	var $btnManual      = $('#btnManual');
 	var $menu           = $('[data="nav"]');
 	var $micro          = $('[alt="micro"]');
 	var $body           = $('body');
 	var $centroMicro    = $(".microBack");
-	var $btnMensaje     = $("form textarea[placeholder='escribi aqui']");
+	var $btnMensaje     = $("#input-10");
 	var $pantalla       = $(window);
 	var $back 			= $("#back");
+	var $grabar         = $("#grabar");
 	var $topMicro;
 	
 	$logo.animate({
@@ -27,30 +28,24 @@ $(function(){
 			"background-position-y": ($topMicro - 245) + "px"
 		});
 	})
-	$btn2.on('click',function(){
-		$btnMensaje.parent().css({'display':'block'});
+	$btnManual.on('click',function(){
 		$body.css({'overflow':'hidden'});
 		$body.removeClass('microBack');
-		$pantalla.scrollTop(0);
 		$back.css("visibility","visible");
+		$grabar.css({"marginLeft":"-100vw"});
 	});
 	$btnMensaje.on('click',function(){
-		$(this).css({
-			'margin-top':'3em',
-			'min-height':'250px',
-			'background-color':'#56595A'
-		});
-		$body.css('overflow','hidden');
+		$(this).animate({
+			'min-height':'250px'
+		},1000);
 	});
 	$btnMensaje.next().on('click',function(){
 		$(this).parent().parent().css('display','none');
-		$body.css({'overflow-y':'scroll','overflow-x':'hidden'});
 	})
 	$back.on('click',function(){
 		$(this).css('visibility','hidden');
-		$body.css({'overflow-y':'scroll','overflow-x':'hidden'});
-		$btnMensaje.parent().css('display','none');
 		$micro.removeClass("opacity0");
 		$body.removeClass("microBack");
+		$grabar.css({"marginLeft":"0"});
 	});
 });
