@@ -8,6 +8,7 @@ $(function(){
 	var $centroMicro    = $(".microBack");
 	var $btnMensaje     = $("form textarea[placeholder='escribi aqui']");
 	var $pantalla       = $(window);
+	var $back 			= $("#back");
 	var $topMicro;
 	
 	$logo.animate({
@@ -31,6 +32,7 @@ $(function(){
 		$body.css({'overflow':'hidden'});
 		$body.removeClass('microBack');
 		$pantalla.scrollTop(0);
+		$back.css("visibility","visible");
 	});
 	$btnMensaje.on('click',function(){
 		$(this).css({
@@ -44,4 +46,11 @@ $(function(){
 		$(this).parent().parent().css('display','none');
 		$body.css({'overflow-y':'scroll','overflow-x':'hidden'});
 	})
+	$back.on('click',function(){
+		$(this).css('visibility','hidden');
+		$body.css({'overflow-y':'scroll','overflow-x':'hidden'});
+		$btnMensaje.parent().css('display','none');
+		$micro.removeClass("opacity0");
+		$body.removeClass("microBack");
+	});
 });

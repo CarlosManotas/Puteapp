@@ -3662,10 +3662,13 @@ header .ed-item[data='menu'] {
 header .ed-item[data='menu'] span {
   font-size: 2.5rem;
   color: white;
-  margin-bottom: .3em;
+  margin-bottom: .2em;
   cursor: pointer;
-  margin-left: auto;
-  width: 20%;
+  padding-top: .1em;
+}
+
+header .ed-item[data='menu'] span#back {
+  visibility: hidden;
 }
 
 header [data='nav'] {
@@ -3677,7 +3680,7 @@ header [data='nav'] {
 }
 
 header [data='nav'] figure {
-  margin-top: 3.5em;
+  margin-top: 4.2em;
 }
 
 header [data='nav'] ul {

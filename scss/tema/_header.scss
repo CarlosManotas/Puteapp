@@ -34,10 +34,12 @@ header{
 		span{
 			font-size: 2.5rem;
 			color: white;
-			margin-bottom: .3em;
+			margin-bottom: .2em;
 			cursor: pointer;
-			margin-left: auto;
-			width: 20%;
+			padding-top: .1em;
+		}
+		span#back{
+			visibility: hidden;
 		}
 	}
 	[data='nav']{
@@ -47,7 +49,7 @@ header{
 		position: absolute;
 		z-index: 99998;
 		figure{
-			margin-top: 3.5em;
+			margin-top: 4.2em;
 		}
 		ul{
 			padding: 0;
