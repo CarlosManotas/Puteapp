@@ -47,5 +47,6 @@ $(function(){
 		$micro.removeClass("opacity0");
 		$body.removeClass("microBack");
 		$grabar.css({"marginLeft":"0"});
+		$btnMensaje.css({"min-height":"0"});
 	});
 });
