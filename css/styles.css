@@ -3956,3 +3956,27 @@ header [data='nav'] ul li a {
   line-height: 4;
   background: transparent;
 }
+
+#login {
+  width: 100vw;
+  position: relative;
+}
+
+#login button {
+  margin-top: 2rem;
+  width: 80%;
+  background-color: blue;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  color: white;
+  line-height: 4;
+}
+
+#login form input {
+  width: 80%;
+  line-height: 4;
+  border-radius: 50px;
+  border: 1px solid white;
+  margin-bottom: 1em;
+  text-align: center;
+}

@@ -56,7 +56,13 @@ html(lang="es")
                   span.input__label-content.input__label-content--jiro
                     | Escribe aquí
               button SIGUIENTE
-              
+      article#login
+        .ed-container.abcenter
+          .ed-item
+            button.icon-facebook.espacio Login con facebook
+            form(action="/usuario",method='POST') 
+              input(type="text",placeholder='Username') 
+              input(type="password",placeholder='Password') 
 
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
