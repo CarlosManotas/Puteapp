@@ -3886,7 +3886,7 @@ header [data='nav'] ul li a {
 
 #section {
   height: 100vh;
-  width: 200%;
+  width: 300%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3963,13 +3963,14 @@ header [data='nav'] ul li a {
 }
 
 #login button {
-  margin-top: 2rem;
+  margin-top: 5rem;
   width: 80%;
   background-color: blue;
   border-radius: 50px;
   border: 1px solid transparent;
   color: white;
   line-height: 4;
+  margin-bottom: 2em;
 }
 
 #login form input {
@@ -3977,6 +3978,6 @@ header [data='nav'] ul li a {
   line-height: 4;
   border-radius: 50px;
   border: 1px solid white;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   text-align: center;
 }

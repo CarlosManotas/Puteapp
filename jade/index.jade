@@ -34,7 +34,7 @@ html(lang="es")
             img(src="img/logo.svg", alt="")
         .ed-item
           figure
-            img(src="img/pasos.svg", alt="")
+            img#pasos(src="img/pasos.svg", alt="")
     section#section
       article#grabar
         .ed-container.abcenter
@@ -63,7 +63,9 @@ html(lang="es")
             form(action="/usuario",method='POST') 
               input(type="text",placeholder='Username') 
               input(type="password",placeholder='Password') 
+              button Login
 
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(src="js/viewport.js")
   script(src="js/scripts.js")

@@ -10,8 +10,9 @@ $(function(){
 	var $pantalla       = $(window);
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
+	var $imgPasos       = $("#pasos");
 	var $topMicro;
-	
+
 	$logo.animate({
 		'margin-top':'30em',
 		'opacity':'0'},2000,function(){
@@ -33,6 +34,7 @@ $(function(){
 		$body.removeClass('microBack');
 		$back.css("visibility","visible");
 		$grabar.css({"marginLeft":"-100vw"});
+		estoy();
 	});
 	$btnMensaje.on('click',function(){
 		$(this).animate({
@@ -48,5 +50,15 @@ $(function(){
 		$body.removeClass("microBack");
 		$grabar.css({"marginLeft":"0"});
 		$btnMensaje.css({"min-height":"0"});
+		noEstoy();
 	});
+
+	function estoy(){
+		$imgPasos.removeAttr("src");
+		$imgPasos.attr("src","img/pasos2.svg");
+	}
+	function noEstoy(){
+		$imgPasos.removeAttr("src");
+		$imgPasos.attr("src","img/pasos.svg");
+	}
 });
