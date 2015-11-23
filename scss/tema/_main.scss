@@ -19,7 +19,7 @@
 	max-height: 100vh;
 	width: 100vw;
 	transition: margin .5s;
-	margin-left: 0;
+	margin-left: -200vw;
 
 	figure[alt="micro"]{
 		margin: .2em auto 2em auto;
@@ -65,11 +65,17 @@
 }
 #login{
 	width:100vw;
+	height:75vh;
 	position:relative;
+	overflow:scroll;
+	@include desde(movil){
+		background: url("../img/furia.png")no-repeat;
+		background-position: center bottom;
+	}
 	button{
-		margin-top: 5rem;
-		width: 80%;
-		background-color:blue;
+		margin-top: 1.5rem;
+		width: 90%;
+		background-color:#3a589e;
 		border-radius: 50px;
 		border:1px solid transparent;
 		color:white;
@@ -78,12 +84,46 @@
 	}
 	form{
 		input{
-			width: 80%;
+			width: 90%;
 			line-height: 4;
 			border-radius:50px;
 			border: 1px solid white;
 			margin-bottom: 2em;
 			text-align: center;
+		}
+		input[placeholder="Username"]{
+			background:url(../img/user.png)no-repeat , #a6a6a8;
+		}
+		input[placeholder="Password"]{
+			background:url(../img/pass.png)no-repeat, #a6a6a8;
+		}
+		input[placeholder="Username"],
+		input[placeholder="Password"]{
+			background-position: 25% 50%;
+			border:none;
+			color:white;
+		}
+		::-webkit-input-placeholder { color: white; } 
+		input[value="Login"] {
+			border:none;
+			background:url(../img/flecha.png)no-repeat,transparent;
+			background-position: 30% 50%;
+			color:red;
+			margin-top: -1.5em;
+			font-size: 1em; 
+		}
+
+		@include desde(movil){
+			
+			input[placeholder="Username"],
+			input[placeholder="Password"]{
+				background-position: 35% 50%;
+				border:none;
+				color:white;
+			}
+			input[value="Login"]{
+				background-position: 42% 50%;
+			}
 		}
 	}
 }

@@ -3903,7 +3903,7 @@ header [data='nav'] ul li a {
   width: 100vw;
   -webkit-transition: margin 0.5s;
           transition: margin 0.5s;
-  margin-left: 0;
+  margin-left: -200vw;
 }
 
 #grabar figure[alt="micro"] {
@@ -3959,13 +3959,22 @@ header [data='nav'] ul li a {
 
 #login {
   width: 100vw;
+  height: 75vh;
   position: relative;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 480px) {
+  #login {
+    background: url("../img/furia.png") no-repeat;
+    background-position: center bottom;
+  }
 }
 
 #login button {
-  margin-top: 5rem;
-  width: 80%;
-  background-color: blue;
+  margin-top: 1.5rem;
+  width: 90%;
+  background-color: #3a589e;
   border-radius: 50px;
   border: 1px solid transparent;
   color: white;
@@ -3974,10 +3983,50 @@ header [data='nav'] ul li a {
 }
 
 #login form input {
-  width: 80%;
+  width: 90%;
   line-height: 4;
   border-radius: 50px;
   border: 1px solid white;
   margin-bottom: 2em;
   text-align: center;
+}
+
+#login form input[placeholder="Username"] {
+  background: url(../img/user.png) no-repeat, #a6a6a8;
+}
+
+#login form input[placeholder="Password"] {
+  background: url(../img/pass.png) no-repeat, #a6a6a8;
+}
+
+#login form input[placeholder="Username"],
+#login form input[placeholder="Password"] {
+  background-position: 25% 50%;
+  border: none;
+  color: white;
+}
+
+#login form ::-webkit-input-placeholder {
+  color: white;
+}
+
+#login form input[value="Login"] {
+  border: none;
+  background: url(../img/flecha.png) no-repeat, transparent;
+  background-position: 30% 50%;
+  color: red;
+  margin-top: -1.5em;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 480px) {
+  #login form input[placeholder="Username"],
+  #login form input[placeholder="Password"] {
+    background-position: 35% 50%;
+    border: none;
+    color: white;
+  }
+  #login form input[value="Login"] {
+    background-position: 42% 50%;
+  }
 }
