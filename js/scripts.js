@@ -3,6 +3,7 @@ $(function(){
 	var $btn            = $('#btn');
 	var $btnManual      = $('#btnManual');
 	var $menu           = $('[data="nav"]');
+	var $menuHijo       = $menu.find('ul').children();
 	var $micro          = $('[alt="micro"]');
 	var $body           = $('body');
 	var $centroMicro    = $(".microBack");
@@ -11,14 +12,24 @@ $(function(){
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
 	var $imgPasos       = $("#pasos");
+	var $inputUser      = $("[placeholder='Username']");
+	var $inputPass      = $("[placeholder='Password']");
 	var $topMicro;
 
+	/*$inputPass.on('keyup',function() {
+		var tamano = $(this).val().length;
+		console.log(tamano);
+		$(this).css({'background-position':'2% 50%'});
+	});*/
 	$logo.animate({
 		'margin-top':'30em',
 		'opacity':'0'},2000,function(){
 			$logo.parent().css('display','none');
 		});
 	$btn.on('click',function(){
+		$menu.slideToggle();
+	})
+	$menuHijo.on('click', 'a',function(){
 		$menu.slideToggle();
 	})
 	$micro.on('click',function(){
@@ -30,11 +41,8 @@ $(function(){
 		});
 	})
 	$btnManual.on('click',function(){
-		$body.css({'overflow':'hidden'});
 		$body.removeClass('microBack');
 		$back.css("visibility","visible");
-		$grabar.css({"marginLeft":"-100vw"});
-		estoy();
 	});
 	$btnMensaje.on('click',function(){
 		$(this).animate({
@@ -48,17 +56,6 @@ $(function(){
 		$(this).css('visibility','hidden');
 		$micro.removeClass("opacity0");
 		$body.removeClass("microBack");
-		$grabar.css({"marginLeft":"0"});
 		$btnMensaje.css({"min-height":"0"});
-		noEstoy();
 	});
-
-	function estoy(){
-		$imgPasos.removeAttr("src");
-		$imgPasos.attr("src","img/pasos2.svg");
-	}
-	function noEstoy(){
-		$imgPasos.removeAttr("src");
-		$imgPasos.attr("src","img/pasos.svg");
-	}
 });

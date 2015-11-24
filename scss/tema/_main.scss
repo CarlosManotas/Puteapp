@@ -1,4 +1,4 @@
-#main{
+.main{
 	padding-top: 2.5em;
 	figure{
 		margin: 0;
@@ -16,10 +16,10 @@
 	flex-direction: row;
 }
 #grabar{
-	max-height: 100vh;
+	height: 100vh;
 	width: 100vw;
 	transition: margin .5s;
-	margin-left: -200vw;
+	margin-left: 0;
 
 	figure[alt="micro"]{
 		margin: .2em auto 2em auto;
@@ -44,11 +44,16 @@
 		color:white;
 		line-height: 4;
 		background:rgba(0,0,0,0);
+		a{
+			color:white;
+			display: block;
+		}
 	}
 }
 #manual{
 	position: relative;
 	width: 100vw;
+	height: 100vh;
 	form{
 		min-height: 70vh;
 		width:100%;
@@ -65,9 +70,8 @@
 }
 #login{
 	width:100vw;
-	height:75vh;
+	height: 100vh;
 	position:relative;
-	overflow:scroll;
 	@include desde(movil){
 		background: url("../img/furia.png")no-repeat;
 		background-position: center bottom;

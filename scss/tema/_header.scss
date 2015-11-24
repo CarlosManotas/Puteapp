@@ -41,13 +41,16 @@ header{
 		}
 		span#back{
 			visibility: hidden;
+			a{
+				color:white;
+			}
 		}
 	}
 	[data='nav']{
 		background-color: rgba(#252526,.9);
 		height: 100vh;
 		display: none;
-		position: absolute;
+		position: fixed;
 		z-index: 99998;
 		figure{
 			margin-top: 4.2em;

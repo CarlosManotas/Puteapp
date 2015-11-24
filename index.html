@@ -12,32 +12,30 @@
     </div>
     <header>
       <div class="ed-container full">
-        <div data="menu" class="ed-item justify"><span id="back" class="icon-izquierda"></span><span id="btn" class="icon-menu"></span></div>
+        <div data="menu" class="ed-item justify"><span id="back"><a href="#grabar" class="icon-izquierda"></a></span><span id="btn" class="icon-menu"></span></div>
         <div data="nav" class="ed-item no-padding">
           <nav class="menu">
             <figure><img src="img/logo.svg" alt=""/></figure>
             <ul>
-              <li> <a href="#">GRABAR</a></li>
-              <li> <a href="#">AYUDA</a></li>
+              <li> <a href="#grabar">GRABAR</a></li>
+              <li> <a href="#manual">AYUDA</a></li>
               <li> <a href="#">TERMINOS Y CONDICIONES</a></li>
-              <li> <a href="#">CREDITOS</a></li>
+              <li> <a href="#login">CREDITOS</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <main id="main">
-      <div class="ed-container abcenter">
-        <div class="ed-item">
-          <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
-        </div>
-        <div class="ed-item">
-          <figure><img id="pasos" src="img/pasos.svg" alt=""/></figure>
-        </div>
-      </div>
-    </main>
     <section id="section">
       <article id="grabar">
+        <div class="ed-container abcenter main">
+          <div class="ed-item">
+            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+          </div>
+          <div class="ed-item">
+            <figure><img id="pasos" src="img/pasos.svg" alt=""/></figure>
+          </div>
+        </div>
         <div class="ed-container abcenter">
           <div class="ed-item">
             <figure alt="micro"><img src="img/micro.svg"/></figure>
@@ -48,15 +46,23 @@
         </div>
         <div class="ed-container abcenter">
           <div class="ed-item">
-            <button id="btnManual" class="icon-derecha espacio">Ingresar Manualmente</button>
+            <button id="btnManual"><a href="#manual" class="icon-derecha espacio">Ingresar Manualmente</a></button>
           </div>
         </div>
       </article>
       <article id="manual">
+        <div class="ed-container abcenter main">
+          <div class="ed-item">
+            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+          </div>
+          <div class="ed-item">
+            <figure><img id="pasos" src="img/pasos.svg" alt=""/></figure>
+          </div>
+        </div>
         <div class="ed-container abcenter">
           <div class="ed-item">
             <form action="/manual_post" id="form" method="POST"><span class="input input--jiro">
-                <textarea id="input-10" type="text" class="input__field input__field--jiro"></textarea>
+                <textarea id="input-10" type="text" required="required" class="input__field input__field--jiro"></textarea>
                 <label for="input-10" class="input__label input__label--jiro"><span class="input__label-content input__label-content--jiro">Escribe aquí</span></label></span>
               <button>SIGUIENTE</button>
             </form>
@@ -64,6 +70,14 @@
         </div>
       </article>
       <article id="login">
+        <div class="ed-container abcenter main">
+          <div class="ed-item">
+            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+          </div>
+          <div class="ed-item">
+            <figure><img id="pasos" src="img/pasos2.svg" alt=""/></figure>
+          </div>
+        </div>
         <div class="ed-container abcenter">
           <div class="ed-item">
             <button class="icon-facebook espacio">Login con facebook</button>

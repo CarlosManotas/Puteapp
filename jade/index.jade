@@ -12,7 +12,8 @@ html(lang="es")
     header
       .ed-container.full
         .ed-item(data='menu').justify
-          span#back.icon-izquierda
+          span#back
+            a(href='#grabar').icon-izquierda
           span#btn.icon-menu
         .ed-item(data='nav').no-padding
           nav.menu
@@ -20,23 +21,22 @@ html(lang="es")
               img(src="img/logo.svg", alt="")
             ul
               li 
-                a(href="#") GRABAR
+                a(href="#grabar") GRABAR
               li 
-                a(href="#") AYUDA
+                a(href="#manual") AYUDA
               li 
                 a(href="#") TERMINOS Y CONDICIONES
               li 
-                a(href="#") CREDITOS
-    main#main
-      .ed-container.abcenter
-        .ed-item
-          figure(alt="logo")
-            img(src="img/logo.svg", alt="")
-        .ed-item
-          figure
-            img#pasos(src="img/pasos.svg", alt="")
+                a(href="#login") CREDITOS
     section#section
       article#grabar
+        .ed-container.abcenter.main
+          .ed-item
+            figure(alt="logo")
+              img(src="img/logo.svg", alt="")
+          .ed-item
+            figure
+              img#pasos(src="img/pasos.svg", alt="")
         .ed-container.abcenter
           .ed-item
             figure(alt="micro")
@@ -45,18 +45,33 @@ html(lang="es")
             p Apretá el mic y seleccioná “permitir” para comenzar a grabar
         .ed-container.abcenter
           .ed-item
-            button#btnManual.icon-derecha.espacio Ingresar Manualmente
+            button#btnManual
+              a(href='#manual').icon-derecha.espacio Ingresar Manualmente
       article#manual
+        .ed-container.abcenter.main
+          .ed-item
+            figure(alt="logo")
+              img(src="img/logo.svg", alt="")
+          .ed-item
+            figure
+              img#pasos(src="img/pasos.svg", alt="")
         .ed-container.abcenter
           .ed-item
             form(action="/manual_post",id='form',method='POST')
               span.input.input--jiro
-                textarea#input-10.input__field.input__field--jiro(type="text")
+                textarea#input-10.input__field.input__field--jiro(type="text",required)
                 label.input__label.input__label--jiro(for="input-10")
                   span.input__label-content.input__label-content--jiro
                     | Escribe aquí
               button SIGUIENTE
       article#login
+        .ed-container.abcenter.main
+          .ed-item
+            figure(alt="logo")
+              img(src="img/logo.svg", alt="")
+          .ed-item
+            figure
+              img#pasos(src="img/pasos2.svg", alt="")
         .ed-container.abcenter
           .ed-item
             button.icon-facebook.espacio Login con facebook

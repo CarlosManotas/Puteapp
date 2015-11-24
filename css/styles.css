@@ -3827,11 +3827,15 @@ header .ed-item[data='menu'] span#back {
   visibility: hidden;
 }
 
+header .ed-item[data='menu'] span#back a {
+  color: white;
+}
+
 header [data='nav'] {
   background-color: rgba(37, 37, 38, 0.9);
   height: 100vh;
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 99998;
 }
 
@@ -3871,15 +3875,15 @@ header [data='nav'] ul li a {
           transition: all 0.5s;
 }
 
-#main {
+.main {
   padding-top: 2.5em;
 }
 
-#main figure {
+.main figure {
   margin: 0;
 }
 
-#main figure[alt="logo"] {
+.main figure[alt="logo"] {
   width: 65%;
   margin: auto;
 }
@@ -3899,11 +3903,11 @@ header [data='nav'] ul li a {
 }
 
 #grabar {
-  max-height: 100vh;
+  height: 100vh;
   width: 100vw;
   -webkit-transition: margin 0.5s;
           transition: margin 0.5s;
-  margin-left: -200vw;
+  margin-left: 0;
 }
 
 #grabar figure[alt="micro"] {
@@ -3937,9 +3941,15 @@ header [data='nav'] ul li a {
   background: transparent;
 }
 
+#grabar button#btnManual a {
+  color: white;
+  display: block;
+}
+
 #manual {
   position: relative;
   width: 100vw;
+  height: 100vh;
 }
 
 #manual form {
@@ -3959,9 +3969,8 @@ header [data='nav'] ul li a {
 
 #login {
   width: 100vw;
-  height: 75vh;
+  height: 100vh;
   position: relative;
-  overflow: scroll;
 }
 
 @media screen and (min-width: 480px) {
