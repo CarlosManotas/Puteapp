@@ -3932,6 +3932,7 @@ header [data='nav'] ul li a {
 }
 
 #grabar button#btnManual {
+  max-width: 475px;
   margin-top: 2rem;
   width: 85%;
   border-radius: 50px;
@@ -3953,13 +3954,16 @@ header [data='nav'] ul li a {
 }
 
 #manual form {
+  max-width: 480px;
+  margin: auto;
   min-height: 70vh;
   width: 100%;
 }
 
 #manual form button {
+  max-width: 480px;
   margin-top: 2rem;
-  width: 80%;
+  width: 100%;
   border-radius: 50px;
   border: 1px solid white;
   color: white;
@@ -3968,9 +3972,18 @@ header [data='nav'] ul li a {
 }
 
 #login {
-  width: 100vw;
+  width: 100vw !important;
   height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (min-width: 480px) {
@@ -3981,18 +3994,44 @@ header [data='nav'] ul li a {
 }
 
 #login button {
+  max-width: 475px;
+  text-align: center;
   margin-top: 1.5rem;
-  width: 90%;
+  width: 100%;
   background-color: #3a589e;
   border-radius: 50px;
   border: 1px solid transparent;
   color: white;
-  line-height: 4;
   margin-bottom: 2em;
+  line-height: 4;
+}
+
+#login button span {
+  font-size: 1.6em;
+  line-height: 0;
+  margin-left: -5%;
+}
+
+#login .hastaFondo {
+  margin-top: auto;
+  position: relative;
+  background: #56595A;
+  width: 100vw;
+  height: 30px;
+}
+
+#login .hastaFondo a {
+  color: white;
+}
+
+#login form {
+  max-width: 480px;
 }
 
 #login form input {
-  width: 90%;
+  max-width: 475px;
+  display: block;
+  width: 100%;
   line-height: 4;
   border-radius: 50px;
   border: 1px solid white;
@@ -4022,10 +4061,12 @@ header [data='nav'] ul li a {
 #login form input[value="Login"] {
   border: none;
   background: url(../img/flecha.png) no-repeat, transparent;
-  background-position: 30% 50%;
+  background-position: 2% 50%;
   color: red;
   margin-top: -1.5em;
   font-size: 1em;
+  max-width: 120px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 480px) {
@@ -4036,6 +4077,6 @@ header [data='nav'] ul li a {
     color: white;
   }
   #login form input[value="Login"] {
-    background-position: 42% 50%;
+    background-position: 2% 50%;
   }
 }

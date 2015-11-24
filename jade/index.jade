@@ -36,7 +36,7 @@ html(lang="es")
               img(src="img/logo.svg", alt="")
           .ed-item
             figure
-              img#pasos(src="img/pasos.svg", alt="")
+              img#pasos(src="img/pasos1.svg", alt="")
         .ed-container.abcenter
           .ed-item
             figure(alt="micro")
@@ -54,7 +54,7 @@ html(lang="es")
               img(src="img/logo.svg", alt="")
           .ed-item
             figure
-              img#pasos(src="img/pasos.svg", alt="")
+              img#pasos(src="img/pasos1.svg", alt="")
         .ed-container.abcenter
           .ed-item
             form(action="/manual_post",id='form',method='POST')
@@ -74,11 +74,19 @@ html(lang="es")
               img#pasos(src="img/pasos2.svg", alt="")
         .ed-container.abcenter
           .ed-item
-            button.icon-facebook.espacio Login con facebook
-            form(action="/usuario",method='POST') 
-              input(type="text",placeholder='Username') 
-              input(type="password",placeholder='Password') 
-              input(type="submit", value="Login")
+            button
+              span.icon-facebook.espacio 
+              | Login con facebook
+            form(action="/usuario",method='POST').ed-container.abcenter
+              input(type="text",placeholder='Username').ed-item 
+              input(type="password",placeholder='Password').ed-item 
+              input(type="submit", value="Login").ed-item
+        .ed-container.abcenter.justify.hastaFondo.full
+          .ed-item.movil-50
+            a(href="#crear") crear una cuenta
+          .ed-item.movil-50
+            a(href="terminos.html") terminos y condiciones
+
             
 
 

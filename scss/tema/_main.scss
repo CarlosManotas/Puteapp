@@ -37,6 +37,7 @@
 		}
 	}
 	button#btnManual{
+		max-width: 475px;
 		margin-top: 2rem;
 		width: 85%;
 		border-radius: 50px;
@@ -48,6 +49,7 @@
 			color:white;
 			display: block;
 		}
+	
 	}
 }
 #manual{
@@ -55,11 +57,14 @@
 	width: 100vw;
 	height: 100vh;
 	form{
+		max-width: 480px;
+		margin: auto;
 		min-height: 70vh;
 		width:100%;
 		button{
+			max-width: 480px;
 			margin-top: 2rem;
-			width: 80%;
+			width: 100%;
 			border-radius: 50px;
 			border:1px solid white;
 			color:white;
@@ -69,26 +74,50 @@
 	}
 }
 #login{
-	width:100vw;
+	width:100vw !important;
 	height: 100vh;
 	position:relative;
+	display: flex;
+	flex-direction:column;
+
 	@include desde(movil){
 		background: url("../img/furia.png")no-repeat;
 		background-position: center bottom;
 	}
 	button{
+		max-width: 475px;
+		text-align: center;
 		margin-top: 1.5rem;
-		width: 90%;
+		width: 100%;
 		background-color:#3a589e;
 		border-radius: 50px;
 		border:1px solid transparent;
 		color:white;
-		line-height: 4;
 		margin-bottom: 2em;
+		line-height: 4;
+		span{
+			font-size: 1.6em;
+			line-height: 0;
+			margin-left: -5%;
+		}
+	}
+
+	.hastaFondo{
+		margin-top: auto;
+		position: relative;
+		background:#56595A;
+		width:100vw;
+		height: 30px;
+		a{
+			color:white;
+		}
 	}
 	form{
+		max-width: 480px;
 		input{
-			width: 90%;
+			max-width: 475px;
+			display:block;
+			width: 100%;
 			line-height: 4;
 			border-radius:50px;
 			border: 1px solid white;
@@ -111,10 +140,12 @@
 		input[value="Login"] {
 			border:none;
 			background:url(../img/flecha.png)no-repeat,transparent;
-			background-position: 30% 50%;
+			background-position: 2% 50%;
 			color:red;
 			margin-top: -1.5em;
 			font-size: 1em; 
+			max-width: 120px;
+			cursor: pointer;
 		}
 
 		@include desde(movil){
@@ -126,7 +157,7 @@
 				color:white;
 			}
 			input[value="Login"]{
-				background-position: 42% 50%;
+				background-position: 2% 50%;
 			}
 		}
 	}
