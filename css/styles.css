@@ -3993,6 +3993,12 @@ header [data='nav'] ul li a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  #login {
+    background: none;
+  }
+}
+
 #login button {
   max-width: 475px;
   text-align: center;

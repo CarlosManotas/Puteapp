@@ -84,6 +84,9 @@
 		background: url("../img/furia.png")no-repeat;
 		background-position: center bottom;
 	}
+	@include desde(web){
+		background: none;
+	}
 	button{
 		max-width: 475px;
 		text-align: center;
