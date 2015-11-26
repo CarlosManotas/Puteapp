@@ -14,22 +14,33 @@ $(function(){
 	var $imgPasos       = $("#pasos");
 	var $inputUser      = $("[placeholder='Username']");
 	var $inputPass      = $("[placeholder='Password']");
+	var $inputVal       = $("[method='POST']").children("[placeholder]").css('background-position').substr(0,7);
 	var $valInputPass   = $inputPass.css('background-position'); 
 	var $valInputUser   = $inputUser.css('background-position');
 	var $topMicro;
 	var objPassword 	= {};
 	var objUser         = {};
+
+
 	var objForm = {
 		form : $("[method='POST']"),
-		campo: $("[method='POST']").children()
+		yosoy: $("[method='POST']").children(),
+		valor: function(){
+			return this.yosoy.css('background-position').substr(0,7);
+		}
 	};
-	console.log(objForm.campo);
-	objPassword.yosoy 	= $inputPass;
+
+
+
+	console.log(objForm.valor());
+	console.log($inputVal);
+	/*objPassword.yosoy 	= $inputPass;
 	objPassword.valor 	= $valInputPass;
 	objUser.yosoy       = $inputUser;
 	objUser.valor		= $valInputUser;
 	campo(objPassword);
-	campo(objUser);
+	campo(objUser);*/
+	campo(objForm);
 
 
 	$(window).resize(function() {
@@ -41,14 +52,14 @@ $(function(){
 		objeto.yosoy.on('keyup',function(){
 			var tamano = $(this).val().length;
 			if($pantalla >= 480){
-				$(this).css({'background-position':'35% -500%'});
+				$(this).css({'background-position':'35% -1000%'});
 				if(tamano === 0){
-					$(this).css({'background-position' :objeto.valor});
+					$(this).css({'background-position' :$inputVal});
 				} 
 			}else{
-				$(this).css({'background-position':'25% -500%'});
+				$(this).css({'background-position':'25% -1000%'});
 				if(tamano === 0){
-					$(this).css({'background-position' :objeto.valor});
+					$(this).css({'background-position' :$inputVal});
 				} 
 			}
 		})
