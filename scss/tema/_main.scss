@@ -1,3 +1,8 @@
+main{
+	width:100%;
+	max-width: 100vw;
+	overflow: hidden;
+}
 .main{
 	padding-top: 2.5em;
 	figure{
@@ -7,11 +12,21 @@
 		width: 65%;
 		margin: auto;
 	}
-
+	figure[alt="User"]{
+		width: 118px;
+		height: 118px;
+		background: url(../img/user-born.png)no-repeat , white;
+		border-radius:50%;
+		overflow: hidden;
+		margin: 1.3em auto;
+		border: 2px solid red;
+		box-shadow: 3px 3px 8px rgba(0,0,0,.2),
+		-3px -3px 8px rgba(0,0,0,.2);
+	}
 }
 #section{
 	height:100vh;
-	width:300%;
+	width:300vw;
 	display:flex;
 	flex-direction: row;
 }
@@ -73,8 +88,11 @@
 		}
 	}
 }
-#login{
+#login,
+#login2{
+
 	width:100vw !important;
+	min-height :480px;
 	height: 100vh;
 	position:relative;
 	display: flex;
@@ -134,11 +152,26 @@
 		input[placeholder="Password"]{
 			background:url(../img/pass.png)no-repeat, #a6a6a8;
 		}
+		input[placeholder="Email"]{
+			background:url(../img/mail.png)no-repeat, #a6a6a8;
+		}
+		input[placeholder="Pass Repeat"]{
+			background:url(../img/pass.png)no-repeat, #a6a6a8;
+		}
+		input[value="Create User"]{
+			background:url(../img/flecha2.png)no-repeat,#F2652F;
+			border: 1px solid darken(#F2652F,15%);
+			color: white;
+		}
 		input[placeholder="Username"],
-		input[placeholder="Password"]{
+		input[placeholder="Password"],
+		input[placeholder="Email"],
+		input[value="Create User"],
+		input[placeholder="Pass Repeat"]{
 			background-position: 25% 50%;
 			border:none;
 			color:white;
+			transition: background-position 1s;
 		}
 		::-webkit-input-placeholder { color: white; } 
 		input[value="Login"] {
@@ -156,7 +189,10 @@
 		@include desde(movil){
 			
 			input[placeholder="Username"],
-			input[placeholder="Password"]{
+			input[placeholder="Password"],
+			input[placeholder="Email"],
+			input[value="Create User"],
+			input[placeholder="Pass Repeat"]{
 				background-position: 35% 50%;
 				border:none;
 				color:white;

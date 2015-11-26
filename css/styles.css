@@ -3771,6 +3771,10 @@ body {
   padding: 0;
   font-family: 'heroregular', 'san-serif';
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-width: 319px;
+  max-width: 100vw;
 }
 
 .microBack {
@@ -3788,6 +3792,8 @@ body {
   background-color: #C3C3C5;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  z-index: 99999999;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3875,6 +3881,12 @@ header [data='nav'] ul li a {
           transition: all 0.5s;
 }
 
+main {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .main {
   padding-top: 2.5em;
 }
@@ -3888,9 +3900,20 @@ header [data='nav'] ul li a {
   margin: auto;
 }
 
+.main figure[alt="User"] {
+  width: 118px;
+  height: 118px;
+  background: url(../img/user-born.png) no-repeat, white;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1.3em auto;
+  border: 2px solid red;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), -3px -3px 8px rgba(0, 0, 0, 0.2);
+}
+
 #section {
   height: 100vh;
-  width: 300%;
+  width: 300vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3971,8 +3994,10 @@ header [data='nav'] ul li a {
   background: transparent;
 }
 
-#login {
+#login,
+#login2 {
   width: 100vw !important;
+  min-height: 480px;
   height: 100vh;
   position: relative;
   display: -webkit-box;
@@ -3987,19 +4012,22 @@ header [data='nav'] ul li a {
 }
 
 @media screen and (min-width: 480px) {
-  #login {
+  #login,
+  #login2 {
     background: url("../img/furia.png") no-repeat;
     background-position: center bottom;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #login {
+  #login,
+  #login2 {
     background: none;
   }
 }
 
-#login button {
+#login button,
+#login2 button {
   max-width: 475px;
   text-align: center;
   margin-top: 1.5rem;
@@ -4012,13 +4040,15 @@ header [data='nav'] ul li a {
   line-height: 4;
 }
 
-#login button span {
+#login button span,
+#login2 button span {
   font-size: 1.6em;
   line-height: 0;
   margin-left: -5%;
 }
 
-#login .hastaFondo {
+#login .hastaFondo,
+#login2 .hastaFondo {
   margin-top: auto;
   position: relative;
   background: #56595A;
@@ -4026,16 +4056,19 @@ header [data='nav'] ul li a {
   height: 30px;
 }
 
-#login .hastaFondo a {
+#login .hastaFondo a,
+#login2 .hastaFondo a {
   color: white;
 }
 
-#login form {
+#login form,
+#login2 form {
   max-width: 480px;
   margin: auto;
 }
 
-#login form input {
+#login form input,
+#login2 form input {
   max-width: 475px;
   display: block;
   width: 100%;
@@ -4046,26 +4079,57 @@ header [data='nav'] ul li a {
   text-align: center;
 }
 
-#login form input[placeholder="Username"] {
+#login form input[placeholder="Username"],
+#login2 form input[placeholder="Username"] {
   background: url(../img/user.png) no-repeat, #a6a6a8;
 }
 
-#login form input[placeholder="Password"] {
+#login form input[placeholder="Password"],
+#login2 form input[placeholder="Password"] {
   background: url(../img/pass.png) no-repeat, #a6a6a8;
 }
 
+#login form input[placeholder="Email"],
+#login2 form input[placeholder="Email"] {
+  background: url(../img/mail.png) no-repeat, #a6a6a8;
+}
+
+#login form input[placeholder="Pass Repeat"],
+#login2 form input[placeholder="Pass Repeat"] {
+  background: url(../img/pass.png) no-repeat, #a6a6a8;
+}
+
+#login form input[value="Create User"],
+#login2 form input[value="Create User"] {
+  background: url(../img/flecha2.png) no-repeat, #F2652F;
+  border: 1px solid #c8400d;
+  color: white;
+}
+
 #login form input[placeholder="Username"],
-#login form input[placeholder="Password"] {
+#login form input[placeholder="Password"],
+#login form input[placeholder="Email"],
+#login form input[value="Create User"],
+#login form input[placeholder="Pass Repeat"],
+#login2 form input[placeholder="Username"],
+#login2 form input[placeholder="Password"],
+#login2 form input[placeholder="Email"],
+#login2 form input[value="Create User"],
+#login2 form input[placeholder="Pass Repeat"] {
   background-position: 25% 50%;
   border: none;
   color: white;
+  -webkit-transition: background-position 1s;
+          transition: background-position 1s;
 }
 
-#login form ::-webkit-input-placeholder {
+#login form ::-webkit-input-placeholder,
+#login2 form ::-webkit-input-placeholder {
   color: white;
 }
 
-#login form input[value="Login"] {
+#login form input[value="Login"],
+#login2 form input[value="Login"] {
   border: none;
   background: url(../img/flecha.png) no-repeat, transparent;
   background-position: 2% 50%;
@@ -4079,12 +4143,21 @@ header [data='nav'] ul li a {
 
 @media screen and (min-width: 480px) {
   #login form input[placeholder="Username"],
-  #login form input[placeholder="Password"] {
+  #login form input[placeholder="Password"],
+  #login form input[placeholder="Email"],
+  #login form input[value="Create User"],
+  #login form input[placeholder="Pass Repeat"],
+  #login2 form input[placeholder="Username"],
+  #login2 form input[placeholder="Password"],
+  #login2 form input[placeholder="Email"],
+  #login2 form input[value="Create User"],
+  #login2 form input[placeholder="Pass Repeat"] {
     background-position: 35% 50%;
     border: none;
     color: white;
   }
-  #login form input[value="Login"] {
+  #login form input[value="Login"],
+  #login2 form input[value="Login"] {
     background-position: 2% 50%;
   }
 }

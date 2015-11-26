@@ -8,19 +8,51 @@ $(function(){
 	var $body           = $('body');
 	var $centroMicro    = $(".microBack");
 	var $btnMensaje     = $("#input-10");
-	var $pantalla       = $(window);
+	var $pantalla       = $(window).width();
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
 	var $imgPasos       = $("#pasos");
 	var $inputUser      = $("[placeholder='Username']");
 	var $inputPass      = $("[placeholder='Password']");
+	var $valInputPass   = $inputPass.css('background-position'); 
+	var $valInputUser   = $inputUser.css('background-position');
 	var $topMicro;
+	var objPassword 	= {};
+	var objUser         = {};
+	var objForm = {
+		form : $("[method='POST']"),
+		campo: $("[method='POST']").children()
+	};
+	console.log(objForm.campo);
+	objPassword.yosoy 	= $inputPass;
+	objPassword.valor 	= $valInputPass;
+	objUser.yosoy       = $inputUser;
+	objUser.valor		= $valInputUser;
+	campo(objPassword);
+	campo(objUser);
 
-	/*$inputPass.on('keyup',function() {
-		var tamano = $(this).val().length;
-		console.log(tamano);
-		$(this).css({'background-position':'2% 50%'});
-	});*/
+
+	$(window).resize(function() {
+		var $pantalla = $(window).width();
+		var $pantallalto = $(window).height();
+		console.log($pantalla + 'px' , $pantallalto + 'px');
+	});
+	function campo(objeto){
+		objeto.yosoy.on('keyup',function(){
+			var tamano = $(this).val().length;
+			if($pantalla >= 480){
+				$(this).css({'background-position':'35% -500%'});
+				if(tamano === 0){
+					$(this).css({'background-position' :objeto.valor});
+				} 
+			}else{
+				$(this).css({'background-position':'25% -500%'});
+				if(tamano === 0){
+					$(this).css({'background-position' :objeto.valor});
+				} 
+			}
+		})
+	}
 	$logo.animate({
 		'margin-top':'30em',
 		'opacity':'0'},2000,function(){

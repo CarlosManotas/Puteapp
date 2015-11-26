@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Puteapp</title>
+  </head>
+  <body>
+    <header>
+      <div class="ed-container full">
+        <div data="menu" class="ed-item justify"><span id="back"><a href="#grabar" class="icon-izquierda"></a></span><span id="btn" class="icon-menu"></span></div>
+        <div data="nav" class="ed-item no-padding">
+          <nav class="menu">
+            <figure><img src="img/logo.svg" alt=""/></figure>
+            <ul>
+              <li> <a href="index.html">VOLVER</a></li>
+              <li> <a href="terminos.html">TERMINOS Y CONDICIONES</a></li>
+              <li> <a href="creditos.html">CREDITOS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <article id="login2">
+        <div class="ed-container abcenter main">
+          <div class="ed-item">
+            <figure alt="User"></figure>
+          </div>
+        </div>
+        <div class="ed-container abcenter">
+          <div class="ed-item">
+            <form action="/usuario" method="POST"> 
+              <input type="text" placeholder="Username"/>
+              <input type="mail" placeholder="Email"/>
+              <input type="password" placeholder="Password"/>
+              <input type="password" placeholder="Pass Repeat"/>
+              <input type="submit" value="Create User"/>
+            </form>
+          </div>
+        </div>
+        <div class="ed-container abcenter justify hastaFondo full">
+          <div class="ed-item"><a href="terminos.html">términos y condiciones</a></div>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/viewport.js"></script>
+  <script src="js/scripts.js"></script>
+</html>

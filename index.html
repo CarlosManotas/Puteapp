@@ -26,74 +26,76 @@
         </div>
       </div>
     </header>
-    <section id="section">
-      <article id="grabar">
-        <div class="ed-container abcenter main">
-          <div class="ed-item">
-            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+    <main>
+      <section id="section">
+        <article id="grabar">
+          <div class="ed-container abcenter main">
+            <div class="ed-item">
+              <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+            </div>
+            <div class="ed-item">
+              <figure><img id="pasos" src="img/pasos1.svg" alt=""/></figure>
+            </div>
           </div>
-          <div class="ed-item">
-            <figure><img id="pasos" src="img/pasos1.svg" alt=""/></figure>
+          <div class="ed-container abcenter">
+            <div class="ed-item">
+              <figure alt="micro"><img src="img/micro.svg"/></figure>
+            </div>
+            <div class="ed-item">
+              <p>Apretá el mic y seleccioná “permitir” para comenzar a grabar</p>
+            </div>
           </div>
-        </div>
-        <div class="ed-container abcenter">
-          <div class="ed-item">
-            <figure alt="micro"><img src="img/micro.svg"/></figure>
+          <div class="ed-container abcenter">
+            <div class="ed-item">
+              <button id="btnManual"><a href="#manual" class="icon-derecha espacio">Ingresar Manualmente</a></button>
+            </div>
           </div>
-          <div class="ed-item">
-            <p>Apretá el mic y seleccioná “permitir” para comenzar a grabar</p>
+        </article>
+        <article id="manual">
+          <div class="ed-container abcenter main">
+            <div class="ed-item">
+              <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+            </div>
+            <div class="ed-item">
+              <figure><img id="pasos" src="img/pasos1.svg" alt=""/></figure>
+            </div>
           </div>
-        </div>
-        <div class="ed-container abcenter">
-          <div class="ed-item">
-            <button id="btnManual"><a href="#manual" class="icon-derecha espacio">Ingresar Manualmente</a></button>
+          <div class="ed-container abcenter">
+            <div class="ed-item">
+              <form action="/manual_post" id="form" method="POST"><span class="input input--jiro">
+                  <textarea id="input-10" type="text" required="required" class="input__field input__field--jiro"></textarea>
+                  <label for="input-10" class="input__label input__label--jiro"><span class="input__label-content input__label-content--jiro">Escribe aquí</span></label></span>
+                <button>SIGUIENTE</button>
+              </form>
+            </div>
           </div>
-        </div>
-      </article>
-      <article id="manual">
-        <div class="ed-container abcenter main">
-          <div class="ed-item">
-            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+        </article>
+        <article id="login">
+          <div class="ed-container abcenter main">
+            <div class="ed-item">
+              <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
+            </div>
+            <div class="ed-item">
+              <figure><img id="pasos" src="img/pasos2.svg" alt=""/></figure>
+            </div>
           </div>
-          <div class="ed-item">
-            <figure><img id="pasos" src="img/pasos1.svg" alt=""/></figure>
+          <div class="ed-container abcenter">
+            <div class="ed-item">
+              <button><span class="icon-facebook espacio"> </span>Login con facebook</button>
+              <form action="/usuario" method="POST"> 
+                <input type="text" placeholder="Username"/>
+                <input type="password" placeholder="Password"/>
+                <input type="submit" value="Login"/>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="ed-container abcenter">
-          <div class="ed-item">
-            <form action="/manual_post" id="form" method="POST"><span class="input input--jiro">
-                <textarea id="input-10" type="text" required="required" class="input__field input__field--jiro"></textarea>
-                <label for="input-10" class="input__label input__label--jiro"><span class="input__label-content input__label-content--jiro">Escribe aquí</span></label></span>
-              <button>SIGUIENTE</button>
-            </form>
+          <div class="ed-container abcenter justify hastaFondo full">
+            <div class="ed-item base-50"><a href="crear.html">crear una cuenta</a></div>
+            <div class="ed-item base-50"><a href="terminos.html">términos y condiciones</a></div>
           </div>
-        </div>
-      </article>
-      <article id="login">
-        <div class="ed-container abcenter main">
-          <div class="ed-item">
-            <figure alt="logo"><img src="img/logo.svg" alt=""/></figure>
-          </div>
-          <div class="ed-item">
-            <figure><img id="pasos" src="img/pasos2.svg" alt=""/></figure>
-          </div>
-        </div>
-        <div class="ed-container abcenter">
-          <div class="ed-item">
-            <button><span class="icon-facebook espacio"> </span>Login con facebook</button>
-            <form action="/usuario" method="POST"> 
-              <input type="text" placeholder="Username"/>
-              <input type="password" placeholder="Password"/>
-              <input type="submit" value="Login"/>
-            </form>
-          </div>
-        </div>
-        <div class="ed-container abcenter justify hastaFondo full">
-          <div class="ed-item movil-50"><a href="#crear">crear una cuenta</a></div>
-          <div class="ed-item movil-50"><a href="terminos.html">términos y condiciones</a></div>
-        </div>
-      </article>
-    </section>
+        </article>
+      </section>
+    </main>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/viewport.js"></script>
