@@ -12,16 +12,8 @@ $(function(){
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
 	var $imgPasos       = $("#pasos");
-	var $inputUser      = $("[placeholder='Username']");
-	var $inputPass      = $("[placeholder='Password']");
 	var $inputVal       = $("[method='POST']").children("[placeholder]").css('background-position').substr(0,7);
-	var $valInputPass   = $inputPass.css('background-position'); 
-	var $valInputUser   = $inputUser.css('background-position');
 	var $topMicro;
-	var objPassword 	= {};
-	var objUser         = {};
-
-
 	var objForm = {
 		form : $("[method='POST']"),
 		yosoy: $("[method='POST']").children(),
@@ -31,23 +23,12 @@ $(function(){
 	};
 
 
-
-	console.log(objForm.valor());
-	console.log($inputVal);
-	/*objPassword.yosoy 	= $inputPass;
-	objPassword.valor 	= $valInputPass;
-	objUser.yosoy       = $inputUser;
-	objUser.valor		= $valInputUser;
-	campo(objPassword);
-	campo(objUser);*/
-	campo(objForm);
-
-
 	$(window).resize(function() {
 		var $pantalla = $(window).width();
 		var $pantallalto = $(window).height();
 		console.log($pantalla + 'px' , $pantallalto + 'px');
 	});
+
 	function campo(objeto){
 		objeto.yosoy.on('keyup',function(){
 			var tamano = $(this).val().length;
@@ -101,4 +82,5 @@ $(function(){
 		$body.removeClass("microBack");
 		$btnMensaje.css({"min-height":"0"});
 	});
+	campo(objForm);
 });
