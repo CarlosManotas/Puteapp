@@ -12,24 +12,15 @@ $(function(){
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
 	var $imgPasos       = $("#pasos");
-	var $inputUser      = $("[placeholder='Username']");
-	var $inputPass      = $("[placeholder='Password']");
-	var $valInputPass   = $inputPass.css('background-position'); 
-	var $valInputUser   = $inputUser.css('background-position');
+	var $inputVal       = $("[method='POST']").children("[placeholder]").css('background-position').substr(0,7);
 	var $topMicro;
-	var objPassword 	= {};
-	var objUser         = {};
 	var objForm = {
 		form : $("[method='POST']"),
-		campo: $("[method='POST']").children()
+		yosoy: $("[method='POST']").children(),
+		valor: function(){
+			return this.yosoy.css('background-position').substr(0,7);
+		}
 	};
-	console.log(objForm.campo);
-	objPassword.yosoy 	= $inputPass;
-	objPassword.valor 	= $valInputPass;
-	objUser.yosoy       = $inputUser;
-	objUser.valor		= $valInputUser;
-	campo(objPassword);
-	campo(objUser);
 
 
 	$(window).resize(function() {
@@ -37,18 +28,19 @@ $(function(){
 		var $pantallalto = $(window).height();
 		console.log($pantalla + 'px' , $pantallalto + 'px');
 	});
+
 	function campo(objeto){
 		objeto.yosoy.on('keyup',function(){
 			var tamano = $(this).val().length;
 			if($pantalla >= 480){
-				$(this).css({'background-position':'35% -500%'});
+				$(this).css({'background-position':'35% -1000%'});
 				if(tamano === 0){
-					$(this).css({'background-position' :objeto.valor});
+					$(this).css({'background-position' :$inputVal});
 				} 
 			}else{
-				$(this).css({'background-position':'25% -500%'});
+				$(this).css({'background-position':'25% -1000%'});
 				if(tamano === 0){
-					$(this).css({'background-position' :objeto.valor});
+					$(this).css({'background-position' :$inputVal});
 				} 
 			}
 		})
@@ -90,4 +82,5 @@ $(function(){
 		$body.removeClass("microBack");
 		$btnMensaje.css({"min-height":"0"});
 	});
+	campo(objForm);
 });
